@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="card">
 
     <div class="search">
@@ -37,6 +36,21 @@
         </div>
     </div>
 </div>
+<script src="script.js">
+
+const apiKey = '1c35d69357f8e6970474465432e8caf1';
+const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?&units=imperial&q=Seattle';
+
+async function checkWeather(){
+    const res = await fetch(`${apiUrl}&appid=${apiKey}`);
+    var data = await res.json();
+
+    console.log(data);
+}
+
+checkWeather();
+
+</script>
 
 </body>
 </html>

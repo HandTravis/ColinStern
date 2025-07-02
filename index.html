@@ -36,7 +36,7 @@
         </div>
     </div>
 </div>
-<script src="script.js">
+<script>
 
 const apiKey = '1c35d69357f8e6970474465432e8caf1';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?&units=imperial&q=Seattle';
@@ -46,10 +46,14 @@ async function checkWeather(){
     var data = await res.json();
 
     console.log(data);
+
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = `${Math.round(data.main.temp)}ºc`;
+    document.querySelector(".humidity").innerHTML = `${data.main.humidity}%`;
+    document.querySelector(".wind").innerHTML = `${Math.round(data.wind.speed)} km/h`;
 }
 
 checkWeather();
-
 </script>
 
 </body>

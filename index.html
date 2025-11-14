@@ -39,9 +39,12 @@
         </div>
     </div>
 </div>
+
+<script src="config.js"></script>
+
 <script>
 
-const apiKey = '1c35d69357f8e6970474465432e8caf1';
+const apiKey = window.APP_CONFIG.API_KEY;
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?&units=imperial';
 
 const searchBox = document.querySelector(".search input");

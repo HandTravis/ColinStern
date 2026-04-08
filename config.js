@@ -1,3 +1,0 @@
-window.APP_CONFIG = {
-  API_KEY: "8974b018a95a7ad2551e31a7336e93f4"
-};
